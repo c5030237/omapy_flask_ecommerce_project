@@ -1,8 +1,16 @@
 # This code imports the Flask library and some functions from it.
-from flask import Flask
+from flask import Flask,render_template
 
 # Create a Flask application instance
 app = Flask(__name__)
+
+# Global variable for site name: Used in templates to display the site name
+siteName = "Omapy E-commerce Project"
+# Set the site name in the app context
+@app.context_processor
+def inject_site_name():
+    return dict(siteName=siteName)
+
 
 # Routes
 #===================
@@ -12,9 +20,24 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # This defines a variable 'studentName' that will be passed to the output HTML
-    studentName = "SHU Student"
+ studentName = "SHU Student"
     # Render HTML with the name in a H1 tag
-    return f"<h1>Hello, {studentName}!</h1>"
+ return render_template('index.html', title="Welcome to Omapy")
+
+@app.route('/about/')
+def about():
+   
+ return render_template('about.html', title="About Omapy")
+
+@app.route('/shop/')
+def shop():
+   
+ return render_template('shop.html', title="Shop on Omapy")
+
+@app.route('/contact/')
+def contact():
+   
+ return render_template('contact.html', title="Contact Omapy")
 
 # Run application
 #=========================================================
