@@ -39,6 +39,13 @@ def contact():
    
  return render_template('contact.html', title="Contact Omapy")
 
+# About Page
+@app.route('/about/<name>')
+def about(name):
+    # Render HTML with the name in a H1 tag
+    return f"<h1>About {name}!</h1><p>It is easy to create new routes</p>"
+
+
 # Run application
 #=========================================================
 # This code executes when the script is run directly.
@@ -47,3 +54,6 @@ if __name__ == '__main__':
     print("Open Your Application in Your Browser: http://localhost:81")
     # The app will run on port 81, accessible from any local IP address
     app.run(host='0.0.0.0', port=81, debug=True)
+
+
+
