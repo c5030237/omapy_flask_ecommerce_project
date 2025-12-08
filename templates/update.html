@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6 wow fadeInUp" data-wow-delay="0.1s">Shop</h1>
+    <ol class="breadcrumb justify-content-center mb-0 wow fadeInUp" data-wow-delay="0.3s">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+        <li class="breadcrumb-item active text-white">Update Product</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+
+
+
+
+<!-- Update Product Page -->
+<div class="container-fluid contact py-5">
+    <div class="container py-5">
+        <div class="p-5 bg-light rounded">
+            <div class="row g-4">
+
+                <div class="col-lg-7">
+                    <h5 class="text-primary wow fadeInUp" data-wow-delay="0.1s">Let’s Work</h5>
+                    <h1 class="display-5 mb-4 wow fadeInUp" data-wow-delay="0.3s">Update Products</h1>
+                    <p class="mb-4 wow fadeInUp" data-wow-delay="0.5s">You can update products in this page by
+                        filling the form and click on the update button.</p>
+                    <form>
+                        <div class="row g-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Product Name" >
+
+                                    <label for="name">Product Name</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="email" placeholder="Product Price">
+                                    <label for="email">Product Price</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+
+                                    <select name="category" class="form-select" id="category"
+                                        aria-label="Category select">
+                                        <option value="">Select Category</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Stationery">Stationery</option>
+                                        <option value="Fashion">Fashion</option>
+                                        <option value="Snacks">Snacks</option>
+                                        <option value="Health">Health</option>
+                                        <option value="Household Items">Household Items</option>
+                                        <option value="Sports">Sports</option>
+                                        <option value="Entertainment">Entertainment</option>
+                                        <option value="Accessories">Accessories</option>
+                                        <option value="Gagets">Gadgets</option>
+                                        <option value="Computing">Computing</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <label for="phone">Product Category</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="project" placeholder="Product Brand">
+                                    <label for="project">Product Brand</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="file" class="form-select" id="subject"
+                                        placeholder="Product Profile Image">
+                                    <label for="subject">Product Profile Image</label>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-12 col-xl-4">
+                                <div class="form-floating">
+                                    <input type="file" class="form-select" id="phone" placeholder="Product Gallery 1">
+                                    <label for="phone">Product Gallery 1</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-4">
+                                <div class="form-floating">
+                                    <input type="file" class="form-select" id="project" placeholder="Product Gallery 2">
+                                    <label for="project">Product Gallery 2</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-4">
+                                <div class="form-floating">
+                                    <input type="file" class="form-select" id="project"
+                                        placeholder="Projduct Gallery 3">
+                                    <label for="project">Product Gallery 3</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                        style="height: 160px" laceholder="Product Description"></textarea>
+                                    <label for="message">Product Description</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3">Update</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="h-100 rounded">
+
+                        <div class="featured-product mb-4">
+                            <br>
+                            <h1 class="display-5 mb-4 wow fadeInUp" data-wow-delay="0.3s">Product Images</h1>
+                            <p class="mb-4 wow fadeInUp" data-wow-delay="0.5s">You can preview the images you uploaded
+                                here.</p>
+
+                            <div class="row g-4">
+
+                                <div class="col-6">
+                                    <div
+                                        class="featured-product-item d-flex flex-column align-items-center text-center">
+                                        <div class="rounded mb-2 d-flex align-items-center justify-content-center"
+                                            style="width: 100%; height: 210px; background-color: #f8f9fa;">
+                                            <img src="{{ url_for('static', filename='img/product-3.png') }}" class="img-fluid rounded"
+                                                style="height: 100%; width: 100%; object-fit: contain;" alt="Image">
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-2" style="font-size: 14px;">Product Profile Image</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="featured-product-item d-flex flex-column align-items-center text-center">
+                                        <div class="rounded mb-2 d-flex align-items-center justify-content-center"
+                                            style="width: 100%; height: 210px; background-color: #f8f9fa;">
+                                            <img src="{{ url_for('static', filename='img/product-3.png') }}" class="img-fluid rounded"
+                                                style="height: 100%; width: 100%; object-fit: contain;" alt="Image">
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-2" style="font-size: 14px;">Product Gallery 1</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="featured-product-item d-flex flex-column align-items-center text-center">
+                                        <div class="rounded mb-2 d-flex align-items-center justify-content-center"
+                                            style="width: 100%; height: 210px; background-color: #f8f9fa;">
+                                            <img src="{{ url_for('static', filename='img/product-3.png') }}" class="img-fluid rounded"
+                                                style="height: 100%; width: 100%; object-fit: contain;" alt="Image">
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-2" style="font-size: 14px;">Product Gallery 2</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="featured-product-item d-flex flex-column align-items-center text-center">
+                                        <div class="rounded mb-2 d-flex align-items-center justify-content-center"
+                                            style="width: 100%; height: 210px; background-color: #f8f9fa;">
+                                            <img src="{{ url_for('static', filename='img/product-3.png') }}" class="img-fluid rounded"
+                                                style="height: 100%; width: 100%; object-fit: contain;" alt="Image">
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-2" style="font-size: 14px;">Product Gallery 3</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex justify-content-center my-4">
+                                <button type="button" class="btn btn-primary px-4 py-3 rounded-pill w-100">Delete
+                                    Product</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Update Product End -->
+
+
+{% endblock %}
