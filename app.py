@@ -40,18 +40,6 @@ def contact():
  return render_template('contact.html', title="Contact Omapy")
 
 # About Page
-@app.route('/about_test/')
-def about_test():
-    # Render HTML with the name in a H1 tag
-    return render_template('about_test.html', title="About Omapy Test")
-
-# About Page
-@app.route('/aboutcopy/')
-def aboutcopy():
-    # Render HTML with the name in a H1 tag
-    return render_template('aboutcopy.html', title="About copy test Omapy Test")
-
-# About Page
 @app.route('/register/')
 def register():
     # Render HTML with the name in a H1 tag
